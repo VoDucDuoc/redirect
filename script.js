@@ -21,30 +21,30 @@ document.addEventListener("DOMContentLoaded", function () {
 
   var platform = getPlatform();
   if (platform === "ios") {
-    window.location.href = "kidsclubdev://homeee";
+    // window.location.href = "kidsclubdev://homeee";
   } else if (platform === "android") {
     // window.open("intent://homeee#Intent;package=com.kd.aeonkids.beta;scheme=kidsclubdev;end;");
     // document.getElementById("alo").click();
   }
+  alert("load done")
+
 });
 
-window.onload = function () {
-    // document.getElementById("alo").click();
-    alert("load done")
-};
+
 
 document.getElementById("btnInstall").addEventListener("click", function () {
   var platform = getPlatform();
+  alert("Platform không được hỗ trợ!");
 
-  if (platform === "ios") {
-    window.location.href =
-      "https://apps.apple.com/app/apple-store/id6473516617";
-  } else if (platform === "android") {
-    alert("Android");
-    // window.location.href("intent://homeee#Intent;package=com.kd.aeonkids.beta;scheme=kidsclubdev;end;");
-  } else {
-    alert("Platform không được hỗ trợ!");
-  }
+  // if (platform === "ios") {
+  //   window.location.href =
+  //     "https://apps.apple.com/app/apple-store/id6473516617";
+  // } else if (platform === "android") {
+  //   alert("Android");
+  //   // window.location.href("intent://homeee#Intent;package=com.kd.aeonkids.beta;scheme=kidsclubdev;end;");
+  // } else {
+  //   alert("Platform không được hỗ trợ!");
+  // }
 });
 
 function getPlatform() {
