@@ -3,15 +3,9 @@ document.addEventListener("DOMContentLoaded", function () {
   var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
   var backgroundContainer = document.getElementById("backgroundContainer");
 
-  if (isMobile) {
     backgroundContainer.style.backgroundImage =
       "url(./assets/images/image-background.png)";
-  } else {
-    // When device isn't mobile
-    var warningIcon = document.createElement("img");
-    warningIcon.src = "warning-icon.png";
-    backgroundContainer.appendChild(warningIcon);
-  }
+ 
 
   var language = navigator.language || navigator.userLanguage;
 
@@ -21,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   var platform = getPlatform();
   if (platform === "ios") {
-    // window.location.href = "kidsclubdev://homeee";
+    window.location.href = "kidsclubdev://homeee";
   } else if (platform === "android") {
     // window.open("intent://homeee#Intent;package=com.kd.aeonkids.beta;scheme=kidsclubdev;end;");
     // document.getElementById("alo").click();
@@ -36,9 +30,12 @@ document.addEventListener("DOMContentLoaded", function () {
 document.getElementById("btnInstall").addEventListener("click", function () {
   var platform = getPlatform();
 
-  window.open(
-    "intent://homeee#Intent;package=com.kd.aeonkids.beta;scheme=kidsclubdev;end;"
-  );
+  document.getElementById("alo").click();
+
+
+  // window.open(
+  //   "intent://homeee#Intent;package=com.kd.aeonkids.beta;scheme=kidsclubdev;end;"
+  // );
 
   // if (platform === "ios") {
   //   window.location.href =
