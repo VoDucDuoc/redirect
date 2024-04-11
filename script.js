@@ -26,7 +26,6 @@ document.addEventListener("DOMContentLoaded", function () {
     // window.open("intent://homeee#Intent;package=com.kd.aeonkids.beta;scheme=kidsclubdev;end;");
     // document.getElementById("alo").click();
   }
-  alert("load done")
 
 });
 
@@ -34,7 +33,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.getElementById("btnInstall").addEventListener("click", function () {
   var platform = getPlatform();
-  alert("Platform không được hỗ trợ!");
+
+  window.open("intent://homeee#Intent;package=com.kd.aeonkids.beta;scheme=kidsclubdev;end;");
 
   // if (platform === "ios") {
   //   window.location.href =
