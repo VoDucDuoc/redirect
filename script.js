@@ -32,8 +32,8 @@ document.getElementById('btnInstall').addEventListener('click', function () {
   if (platform === 'ios') {
     window.location.href = "https://apps.apple.com/app/apple-store/id6473516617";
   } else if (platform === 'android') {
-    // window.location.href = "https://play.google.com/store/apps/details?id=vn.com.aeon.kidsclub";
-    window.open("intent://homeee#Intent;package=com.kd.aeonkids.beta;scheme=kidsclubdev;end;");
+    alert("Android");
+    window.location.href("intent://homeee#Intent;package=com.kd.aeonkids.beta;scheme=kidsclubdev;end;");
 
   } else {
     alert("Platform không được hỗ trợ!");
