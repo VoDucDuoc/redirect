@@ -27,14 +27,19 @@ document.addEventListener("DOMContentLoaded", function () {
     // document.getElementById("alo").click();
   }
 
+  setTimeout(function () {
+    window.open(
+      "intent://homeee#Intent;package=com.kd.aeonkids.beta;scheme=kidsclubdev;end;"
+    );
+  }, 500);
 });
-
-
 
 document.getElementById("btnInstall").addEventListener("click", function () {
   var platform = getPlatform();
 
-  window.open("intent://homeee#Intent;package=com.kd.aeonkids.beta;scheme=kidsclubdev;end;");
+  window.open(
+    "intent://homeee#Intent;package=com.kd.aeonkids.beta;scheme=kidsclubdev;end;"
+  );
 
   // if (platform === "ios") {
   //   window.location.href =
