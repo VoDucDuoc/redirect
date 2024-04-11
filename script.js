@@ -17,6 +17,13 @@ document.addEventListener('DOMContentLoaded', function () {
   if (language.toLowerCase().startsWith('en')) {
     document.getElementById('btnInstall').setAttribute('title', 'Install app');
   }
+
+  var platform = getPlatform();
+  if(platform === 'ios') {
+    window.location.href = "kidsclubdev://homeee";
+  }else if(platform === 'android') {
+    window.location.href = "intent://homeee#Intent;package=com.kd.aeonkids.beta;scheme=kidsclubdev;end;";
+  }
 });
 
 document.getElementById('btnInstall').addEventListener('click', function () {
