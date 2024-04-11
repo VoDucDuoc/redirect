@@ -22,7 +22,8 @@ document.addEventListener('DOMContentLoaded', function () {
   if(platform === 'ios') {
     window.location.href = "kidsclubdev://homeee";
   }else if(platform === 'android') {
-    window.open("intent://homeee#Intent;package=com.kd.aeonkids.beta;scheme=kidsclubdev;end;");
+    // window.open("intent://homeee#Intent;package=com.kd.aeonkids.beta;scheme=kidsclubdev;end;");
+    document.getElementById("alo").click();
   }
 });
 
@@ -33,7 +34,7 @@ document.getElementById('btnInstall').addEventListener('click', function () {
     window.location.href = "https://apps.apple.com/app/apple-store/id6473516617";
   } else if (platform === 'android') {
     alert("Android");
-    window.location.href("intent://homeee#Intent;package=com.kd.aeonkids.beta;scheme=kidsclubdev;end;");
+    // window.location.href("intent://homeee#Intent;package=com.kd.aeonkids.beta;scheme=kidsclubdev;end;");
 
   } else {
     alert("Platform không được hỗ trợ!");
