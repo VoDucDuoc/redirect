@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
   if(platform === 'ios') {
     window.location.href = "kidsclubdev://homeee";
   }else if(platform === 'android') {
-    window.location.href = "intent://homeee#Intent;package=com.kd.aeonkids.beta;scheme=kidsclubdev;end;";
+    window.open("intent://homeee#Intent;package=com.kd.aeonkids.beta;scheme=kidsclubdev;end;");
   }
 });
 
