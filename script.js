@@ -29,11 +29,8 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 window.onload = function () {
-  var platform = getPlatform();
-  if (platform === "android") {
     // document.getElementById("alo").click();
     alert("load done")
-  }
 };
 
 document.getElementById("btnInstall").addEventListener("click", function () {
