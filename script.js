@@ -28,10 +28,9 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   setTimeout(function () {
-    window.open(
-      "intent://homeee#Intent;package=com.kd.aeonkids.beta;scheme=kidsclubdev;end;"
-    );
-  }, 500);
+   document.getElementById("alo").click();
+  }, 1000)
+
 });
 
 document.getElementById("btnInstall").addEventListener("click", function () {
