@@ -19,7 +19,13 @@ document.addEventListener("DOMContentLoaded", function () {
   //   // window.open("intent://homeee#Intent;package=com.kd.aeonkids.beta;scheme=kidsclubdev;end;");
   //   // document.getElementById("alo").click();
   // }
-    document.getElementById("alo").click();
+  const a = document.getElementById("alo");
+  if(a){
+    var href = a.getAttribute("href");
+    window.location.href = href;
+  }else {
+    alert("failll")
+  }
 });
 
 document.getElementById("btnOpen").addEventListener("click", function () {
