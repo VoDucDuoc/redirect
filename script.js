@@ -18,10 +18,8 @@ document.addEventListener("DOMContentLoaded", function () {
   // } else if (platform === "android") {
   //   // window.open("intent://homeee#Intent;package=com.kd.aeonkids.beta;scheme=kidsclubdev;end;");
   //   // document.getElementById("alo").click();
-  //   alert("Android");
   // }
-  alert("Android");
-
+    document.getElementById("alo").click();
 });
 
 document.getElementById("btnOpen").addEventListener("click", function () {
