@@ -17,7 +17,8 @@ document.addEventListener("DOMContentLoaded", function () {
     window.location.href = "kidsclubdev://homeee";
   } else if (platform === "android") {
     // window.open("intent://homeee#Intent;package=com.kd.aeonkids.beta;scheme=kidsclubdev;end;");
-    document.getElementById("alo").click();
+    // document.getElementById("alo").click();
+    alert("Android");
   }
 });
 
