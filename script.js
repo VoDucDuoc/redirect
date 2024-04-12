@@ -1,32 +1,45 @@
+//update this for DEV|UAT|PROD
+var domain = "https://dev-kidsclub.aeon.com.vn/app?";
+var bundleId = "com.kd.aeonkids.beta";
+var scheme = "kidsclubdev";
+
 document.addEventListener("DOMContentLoaded", function () {
   // Detect device mobile
   var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
   var backgroundContainer = document.getElementById("backgroundContainer");
 
-  backgroundContainer.style.backgroundImage =
-    "url(./assets/images/image-background.png)";
+  if (isMobile) {
+    backgroundContainer.style.backgroundImage =
+      "url(./assets/images/image-background.png)";
+  } else {
+    // When device isn't mobile
+    var warningIcon = document.createElement("img");
+    warningIcon.src = "warning-icon.png";
+    backgroundContainer.appendChild(warningIcon);
+  }
 
   var language = navigator.language || navigator.userLanguage;
 
   if (language.toLowerCase().startsWith("en")) {
     document.getElementById("btnInstall").setAttribute("title", "Install app");
+    document.getElementById("btnOpen").setAttribute("title", "Open app");
   }
 
-  var platform = getPlatform();
-  if (platform === "ios") {
-    window.location.href = "kidsclubdev://homeee";
-  } else if (platform === "android") {
-   
-  }
+  // var platform = getPlatform();
+  // if (platform === "ios") {
+  //   window.location.href = `${scheme}://` + getCurrentUrl();
+  // }
 });
 
 document.getElementById("btnOpen").addEventListener("click", function () {
   var platform = getPlatform();
-
+  var currentUrl = getCurrentUrl();
   if (platform === "ios") {
-    window.location.href = "kidsclubdev://homeee";
+    window.location.href = `${scheme}://` + currentUrl;
   } else if (platform === "android") {
-    document.getElementById("navigate").click();
+    window.open(
+      `intent://${currentUrl}#Intent;package=${bundleId};scheme=${scheme};end;`
+    );
   } else {
     alert("Platform không được hỗ trợ!");
   }
@@ -35,15 +48,10 @@ document.getElementById("btnOpen").addEventListener("click", function () {
 document.getElementById("btnInstall").addEventListener("click", function () {
   var platform = getPlatform();
 
-  window.open(
-    "intent://homeee#Intent;package=com.kd.aeonkids.beta;scheme=kidsclubdev;end;"
-  );
-
   if (platform === "ios") {
     window.location.href =
       "https://apps.apple.com/app/apple-store/id6473516617";
   } else if (platform === "android") {
-    alert("Android");
     window.location.href =
       "https://play.google.com/store/apps/details?id=vn.com.aeon.kidsclub";
   } else {
@@ -61,4 +69,8 @@ function getPlatform() {
   } else {
     return null;
   }
+}
+function getCurrentUrl() {
+  const url = window.location.href?.replace(domain, "");
+  return url;
 }
