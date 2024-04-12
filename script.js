@@ -20,12 +20,16 @@ document.addEventListener("DOMContentLoaded", function () {
   //   // document.getElementById("alo").click();
   // }
   const a = document.getElementById("alo");
-  if(a){
-    // var href = a.getAttribute("href");
-    // window.location.href = href;
-    alert("co A")
-  }else {
-    alert("failll")
+  if (a) {
+    var href = a.getAttribute("href");
+    window.location.href = href;
+    alert("co A");
+
+    setTimeout(() => {
+      window.location.href = href;
+    }, 2000);
+  } else {
+    alert("failll");
   }
 });
 
