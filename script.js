@@ -21,12 +21,8 @@ document.addEventListener("DOMContentLoaded", function () {
   // }
   const a = document.getElementById("alo");
   if (a) {
-    var href = a.getAttribute("href");
-    window.location.href = href;
-    alert("co A");
-
     setTimeout(() => {
-      window.location.href = href;
+      document.getElementById("alo").click();
     }, 2000);
   } else {
     alert("failll");
