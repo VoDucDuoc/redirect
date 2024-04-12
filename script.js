@@ -12,21 +12,12 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("btnInstall").setAttribute("title", "Install app");
   }
 
-  // var platform = getPlatform();
-  // if (platform === "ios") {
-  //   window.location.href = "kidsclubdev://homeee";
-  // } else if (platform === "android") {
-  //   // window.open("intent://homeee#Intent;package=com.kd.aeonkids.beta;scheme=kidsclubdev;end;");
-  //   // document.getElementById("alo").click();
-  // }
-  const a = document.getElementById("alo");
-
-  var clickTarget = document.getElementById("clickTarget");
-    var fakeMouseEvent = document.createEvent('MouseEvents');
-    fakeMouseEvent.initMouseEvent("click", true, true, window,
-        0, 0, 0, 20, 10, false, false, false, false, 0, null);
-
-    clickTarget.dispatchEvent(fakeMouseEvent);
+  var platform = getPlatform();
+  if (platform === "ios") {
+    window.location.href = "kidsclubdev://homeee";
+  } else if (platform === "android") {
+   
+  }
 });
 
 document.getElementById("btnOpen").addEventListener("click", function () {
@@ -35,7 +26,7 @@ document.getElementById("btnOpen").addEventListener("click", function () {
   if (platform === "ios") {
     window.location.href = "kidsclubdev://homeee";
   } else if (platform === "android") {
-    document.getElementById("alo").click();
+    document.getElementById("navigate").click();
   } else {
     alert("Platform không được hỗ trợ!");
   }

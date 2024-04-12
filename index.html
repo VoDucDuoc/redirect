@@ -11,23 +11,11 @@
   <div id="backgroundContainer">
 
     <div class="wrapButton">
-      <button id="btnOpen" title="Mở ứng dụng" class="centered-button">Mở ứng dụng2</button>
+      <button id="btnOpen" title="Mở ứng dụng" class="centered-button">Mở ứng dụng</button>
       <button id="btnInstall" title="Tải ứng dụng" class="centered-button">Tải ứng dụng</button>
     </div>
-    <iframe id="l" width="1" height="1" style="visibility:hidden"></iframe>
-
-     <a id="alo" href="intent://homeee#Intent;package=com.kd.aeonkids.beta;scheme=kidsclubdev;end;"></a>
+     <a id="navigate" href="intent://homeee#Intent;package=com.kd.aeonkids.beta;scheme=kidsclubdev;end;"></a>
   </div>
-  <!-- <script src="script.js"></script> -->
-  <script>
-    window.onload = function() {
-      var clickTarget = document.getElementById("alo");
-      var fakeMouseEvent = document.createEvent('MouseEvents');
-      fakeMouseEvent.initMouseEvent("click", true, true, window,
-          0, 0, 0, 20, 10, false, false, false, false, 0, null);
-  
-      clickTarget.dispatchEvent(fakeMouseEvent);
-    };
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
