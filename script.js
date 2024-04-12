@@ -12,14 +12,16 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("btnInstall").setAttribute("title", "Install app");
   }
 
-  var platform = getPlatform();
-  if (platform === "ios") {
-    window.location.href = "kidsclubdev://homeee";
-  } else if (platform === "android") {
-    // window.open("intent://homeee#Intent;package=com.kd.aeonkids.beta;scheme=kidsclubdev;end;");
-    // document.getElementById("alo").click();
-    alert("Android");
-  }
+  // var platform = getPlatform();
+  // if (platform === "ios") {
+  //   window.location.href = "kidsclubdev://homeee";
+  // } else if (platform === "android") {
+  //   // window.open("intent://homeee#Intent;package=com.kd.aeonkids.beta;scheme=kidsclubdev;end;");
+  //   // document.getElementById("alo").click();
+  //   alert("Android");
+  // }
+  alert("Android");
+
 });
 
 document.getElementById("btnOpen").addEventListener("click", function () {
