@@ -21,8 +21,9 @@ document.addEventListener("DOMContentLoaded", function () {
   // }
   const a = document.getElementById("alo");
   if(a){
-    var href = a.getAttribute("href");
-    window.location.href = href;
+    // var href = a.getAttribute("href");
+    // window.location.href = href;
+    alert("co A")
   }else {
     alert("failll")
   }
