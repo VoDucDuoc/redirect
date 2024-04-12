@@ -20,13 +20,13 @@ document.addEventListener("DOMContentLoaded", function () {
   //   // document.getElementById("alo").click();
   // }
   const a = document.getElementById("alo");
-  if (a) {
-    setTimeout(() => {
-      document.getElementById("alo").click();
-    }, 2000);
-  } else {
-    alert("failll");
-  }
+
+  var clickTarget = document.getElementById("clickTarget");
+    var fakeMouseEvent = document.createEvent('MouseEvents');
+    fakeMouseEvent.initMouseEvent("click", true, true, window,
+        0, 0, 0, 20, 10, false, false, false, false, 0, null);
+
+    clickTarget.dispatchEvent(fakeMouseEvent);
 });
 
 document.getElementById("btnOpen").addEventListener("click", function () {
