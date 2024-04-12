@@ -1,5 +1,5 @@
 //update this for DEV|UAT|PROD
-var domain = "https://voducduoc.github.io/redirect";
+var domain = "https://dev-kidsclub.aeon.com.vn/app?";
 var bundleId = "com.kd.aeonkids.beta";
 var scheme = "kidsclubdev";
 
