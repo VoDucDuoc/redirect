@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // while (head.firstChild) {
   //   head.removeChild(head.firstChild);
   // }
-
+  
   // Detect device mobile
   var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
   var backgroundContainer = document.getElementById("backgroundContainer");
