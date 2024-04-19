@@ -1,9 +1,14 @@
 //update this for DEV|UAT|PROD
-var domain = "https://dev-kidsclub.aeon.com.vn/app?";
+var domain = "https://voducduoc.github.io/redirect";
 var bundleId = "com.kd.aeonkids.beta";
 var scheme = "kidsclubdev";
 
 document.addEventListener("DOMContentLoaded", function () {
+  const head = document.head;
+  while (head.firstChild) {
+    head.removeChild(head.firstChild);
+  }
+
   // Detect device mobile
   var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
   var backgroundContainer = document.getElementById("backgroundContainer");
@@ -72,5 +77,6 @@ function getPlatform() {
 }
 function getCurrentUrl() {
   const url = window.location.href?.replace(domain, "");
-  return url;
+  const split = url.split("&");
+  return split[0];
 }
