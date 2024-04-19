@@ -1,13 +1,13 @@
 //update this for DEV|UAT|PROD
-var domain = "https://voducduoc.github.io/redirect";
+var domain = "https://voducduoc.github.io/redirect/";
 var bundleId = "com.kd.aeonkids.beta";
 var scheme = "kidsclubdev";
 
 document.addEventListener("DOMContentLoaded", function () {
-  const head = document.head;
-  while (head.firstChild) {
-    head.removeChild(head.firstChild);
-  }
+  // const head = document.head;
+  // while (head.firstChild) {
+  //   head.removeChild(head.firstChild);
+  // }
 
   // Detect device mobile
   var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
