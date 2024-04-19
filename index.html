@@ -1,21 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>KIDS CLUB</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="icon" type="image/png" href="./assets/images/logo.png" />
-  <meta name="robots" content="noindex, nofollow">
-</head>
-<body>
-  <div id="backgroundContainer">
-
-    <div class="wrapButton">
-      <button id="btnOpen" title="Mở ứng dụng" class="centered-button">Mở ứng dụng</button>
-      <button id="btnInstall" title="Tải ứng dụng" class="centered-button">Tải ứng dụng</button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KIDS CLUB</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/png" href="./assets/images/logo.png" />
+    <meta name="robots" content="noindex, nofollow" />
+    <script>
+      window.addEventListener("DOMContentLoaded", (event) => {
+        const head = document.head;
+        while (head.firstChild) {
+          head.removeChild(head.firstChild);
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <div id="backgroundContainer">
+      <div class="wrapButton">
+        <button id="btnOpen" title="Mở ứng dụng" class="centered-button">
+          Mở ứng dụng
+        </button>
+        <button id="btnInstall" title="Tải ứng dụng" class="centered-button">
+          Tải ứng dụng
+        </button>
+      </div>
     </div>
-  </div>
-  <script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
